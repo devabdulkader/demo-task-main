@@ -1,9 +1,6 @@
 const Hero = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      {/* (Assuming background image handling is included here) */}
-
       {/* Gradient Overlay */}
       <div
         className="absolute inset-0"

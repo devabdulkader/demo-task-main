@@ -1,14 +1,11 @@
 import Main from "./layout/Main";
 
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
 
 import "./index.css";
 import "./styles/fonts.css";
 
 import ErrorPage from "./error-page";
-import Contact from "./pages/ContactPage";
 const routes = [
   {
     path: "/",
@@ -18,9 +15,9 @@ const routes = [
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/home", element: <HomePage /> },
-      { path: "/about", element: <AboutPage /> },
-      { path: "/services", element: <ServicesPage /> },
-      { path: "/contact", element: <Contact /> },
+      // { path: "/about", element: <AboutPage /> },
+      // { path: "/services", element: <ServicesPage /> },
+      // { path: "/contact", element: <Contact /> },
     ],
   },
   // {
