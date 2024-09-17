@@ -26,7 +26,7 @@ const Navbar = () => {
           </Link>
 
           {/* Navigation Links */}
-          <div className="mt-14 hidden lg:flex space-y-8 lg:mt-0 lg:space-x-1 lg:space-y-0">
+          <div className="mt-14 hidden xl:flex space-y-8 lg:mt-0 lg:space-x-1 lg:space-y-0">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
