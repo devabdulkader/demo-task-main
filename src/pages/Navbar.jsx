@@ -22,7 +22,7 @@ const Navbar = () => {
             className="font-inter font-bold text-2xl flex justify-center items-center gap-2 text-white rounded-lg lg:px-6"
           >
             <MdOutlineAccountTree className="text-2xl text-white" />
-            PixLab |
+            Logo
           </Link>
 
           {/* Navigation Links */}
