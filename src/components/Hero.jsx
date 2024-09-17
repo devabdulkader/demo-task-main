@@ -1,13 +1,53 @@
 const Hero = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient Overlay */}
+      {/* Left Image Div */}
       <div
-        className="absolute inset-0"
+        className="absolute top-0 left-0 h-full hidden sm:block"
         style={{
-          background:
-            "linear-gradient(90deg, rgb(19, 14, 16) 10%, rgb(52, 24, 27) 50%, rgb(19, 14, 16) 90%)",
-          zIndex: 1, // Ensure the gradient is above the image
+          width: "20%", // 1/4 width of the screen
+          backgroundImage: "url('/pattern-left.svg')", // Replace with your image
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          zIndex: "10",
+        }}
+      >
+        {/* Fade Effect (Fully fade to the right) */}
+        <div
+          className="absolute inset-0 "
+          style={{
+            background:
+              "linear-gradient(to left, rgba(20, 14, 16, 1) 10%, rgba(19, 14, 16, 0) 100%)", // Full fade to transparent
+          }}
+        />
+      </div>
+
+      {/* Right Image Div */}
+      <div
+        className="absolute top-0 right-0 h-full hidden sm:block"
+        style={{
+          width: "20%", // 1/4 width of the screen
+          backgroundImage: "url('/pattern-right.svg')", // Replace with your image
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          zIndex: "10",
+        }}
+      >
+        {/* Fade Effect (Fade on the left side) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(20, 14, 16, 1) 15%, rgba(19, 14, 16, 0) 100%)", // Full fade to transparent
+          }}
+        />
+      </div>
+
+      {/* Gradient Overlay for the Entire Hero Section */}
+      <div
+        className="absolute inset-0 gradient-middle"
+        style={{
+          zIndex: 1,
         }}
       />
 
@@ -19,9 +59,9 @@ const Hero = () => {
             style={{
               background:
                 "linear-gradient(90deg, rgb(248, 91, 61), rgb(215, 54, 125))",
-              WebkitBackgroundClip: "text", // For Safari/Chrome
+              WebkitBackgroundClip: "text",
               backgroundClip: "text",
-              color: "transparent", // Makes the text see-through, revealing the gradient
+              color: "transparent",
             }}
           >
             Stunning Visuals
@@ -37,7 +77,6 @@ const Hero = () => {
           style={{
             background:
               "linear-gradient(358.3deg, rgb(201,38,152) 12.9%, rgb(250,93,58) 130.3%)",
-            zIndex: 1, // Ensure the gradient is above the image
           }}
         >
           Start creating for free
