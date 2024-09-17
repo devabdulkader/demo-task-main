@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Joti+One&family=Michroma&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,700&family=Roboto:wght@300;400&family=Poppins:wght@300;400;500&display=swap&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=Outfit:wght@100..900&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&family=Marcellus&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Michroma&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,700&family=Roboto:wght@300;400&family=Poppins:wght@300;400;500&display=swap&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=Outfit:wght@100..900&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&family=Marcellus&display=swap");
 
 .marcellus-regular {
   font-family: "Marcellus", serif;
@@ -20,77 +17,76 @@
   font-style: normal;
 }
 .noto-sans-thin {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
 .noto-sans-thin-italic {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 100;
   font-style: italic;
 }
 
 .noto-sans-light {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .noto-sans-light-italic {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
 .noto-sans-regular {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .noto-sans-italic {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .noto-sans-medium {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 .noto-sans-medium-italic {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .noto-sans-bold {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .noto-sans-bold-italic {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .noto-sans-black {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
 .noto-sans-black-italic {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
-
 
 .poppins-thin {
   font-family: "Poppins", sans-serif;
@@ -272,8 +268,7 @@
   font-style: italic;
 }
 
-
-.work-sans{
+.work-sans {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -343,63 +338,55 @@
 }
 
 .montserrat-thin {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .montserrat-thin-italic {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .montserrat-extralight {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .montserrat-light {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .montserrat-regular {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .montserrat-medium {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .montserrat-semibold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .montserrat-bold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .montserrat-extrabold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .montserrat-black {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
+.montserrat-thin-italic {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.montserrat-extralight {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.montserrat-light {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-medium {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.montserrat-semibold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.montserrat-extrabold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
