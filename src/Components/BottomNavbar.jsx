@@ -5,7 +5,7 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger
+  DrawerTrigger,
 } from "@/Components/ui/drawer";
 import { useAppContext } from "@/context";
 import {
@@ -19,7 +19,7 @@ import {
   Plus,
   ShieldCheck,
   User,
-  X
+  X,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { RiHome2Line } from "react-icons/ri";
@@ -45,7 +45,7 @@ const BottomNavbar = () => {
     const currentSearchParams = new URLSearchParams(location.search);
     currentSearchParams.set("drawer", "open");
     navigate(`${location.pathname}?${currentSearchParams.toString()}`, {
-      replace: true
+      replace: true,
     });
   };
 
@@ -53,14 +53,14 @@ const BottomNavbar = () => {
     const currentSearchParams = new URLSearchParams(location.search);
     currentSearchParams.delete("drawer");
     navigate(`${location.pathname}?${currentSearchParams.toString()}`, {
-      replace: true
+      replace: true,
     });
   };
 
   return (
     <div
       style={{
-        zIndex: 100
+        zIndex: 100,
       }}
       className="fixed md:hidden bottom-0 left-0 z-50 w-full bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-700 h-[56px]"
     >
@@ -195,7 +195,7 @@ const BottomNavbar = () => {
               <DrawerClose onClick={closeDrawer} ref={closeRef}>
                 <Button
                   variant="outline"
-                  className="w-full flex items-center justify-center"
+                  className="w-full flex items-center justify-center text-white"
                 >
                   <X className="w-4 h-4 mr-2" />
                   Close

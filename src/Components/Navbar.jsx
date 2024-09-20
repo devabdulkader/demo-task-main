@@ -97,7 +97,7 @@ const Navbar = () => {
   return (
     <>
       {!shouldHideSidebar && (
-        <nav className="font-inter mx-auto h-auto w-full lg:px-20 z-30 fixed top-0 lg:top-10 bg-transparent">
+        <nav className="font-inter mx-auto h-auto w-full xl:px-20 z-30 fixed top-0 xl:top-10 bg-transparent">
           <div className="flex px-6 bg-white shadow-sm dark:bg-black lg:rounded-xl items-center justify-between py-1 lg:px-10 xl:px-20">
             {/* Logo */}
             <Link to="/" className="flex items-center pl-3">
@@ -112,12 +112,12 @@ const Navbar = () => {
             </Link>
 
             {/* Navigation Links */}
-            <div className="mt-14 hidden xl:flex space-y-8 lg:mt-0 lg:space-x-1 lg:space-y-0">
+            <div className="hidden md:flex gap-5 xl:gap-10 ">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="font-inter text-white rounded-lg lg:px-6"
+                  className="font-inter text-white"
                 >
                   {link.label}
                 </Link>

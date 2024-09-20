@@ -127,7 +127,8 @@ const TemplateSelector = () => {
 
   return (
     <>
-      <div className="flex-1 overflow-y-auto">
+      {/* <div className="flex-1 overflow-y-auto py-10 bg-[linear-gradient(90deg,_rgb(19,_14,_16)_25%,_rgb(52,_24,_27)_50%,_rgb(19,_14,_16)_75%)]"> */}
+      <div className="flex-1 overflow-y-auto py-10 gradient-template">
         <main className="px-5">
           <div className="flex justify-center md:justify-between items-center my-4 md:my-8">
             <h1 className="text-xl md:text-2xl text-center md:text-left font-bold  dark:text-gray-100 text-[#171717]">

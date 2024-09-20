@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
-import { Button } from './ui/button';
+import React, { useState, useEffect } from "react";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function ModeToggle() {
   // Initialize theme state from localStorage or default to 'light'
   const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') || 'light';
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") || "light";
     }
-    return 'light';
+    return "light";
   });
 
   // Toggle theme between 'light' and 'dark'
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
 
   // Effect to apply the theme to the document body and persist it
   useEffect(() => {
     document.body.className = theme;
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
