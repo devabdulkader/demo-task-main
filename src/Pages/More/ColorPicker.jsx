@@ -1,9 +1,9 @@
-import Footer from "@/Components/Footer";
 import React, { useState } from "react";
 import { HexAlphaColorPicker } from "react-colorful";
 import { MdContentCopy } from "react-icons/md";
 import { toast } from "react-toastify";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 export default function ColorPicker() {
   const [color, setColor] = useState("#aabbcc");
   const [inputValue, setInputValue] = useState(color);
@@ -26,7 +26,7 @@ export default function ColorPicker() {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark"
+      theme: "dark",
     });
   };
 
@@ -140,7 +140,7 @@ export default function ColorPicker() {
         <HandyFreeTools toolsTitle={"You might also like"} />
       </div>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

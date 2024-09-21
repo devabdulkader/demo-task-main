@@ -1,6 +1,6 @@
-import BottomNavbar from "@/Components/BottomNavbar";
-import { devices } from "@/Components/files/devices";
 import { Link } from "react-router-dom";
+import { devices } from "../../constants/devices";
+import BottomNavbar from "../../Components/shared/header/BottomNavbar";
 
 const DeviceMockUp = ({}) => {
   return (

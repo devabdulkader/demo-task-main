@@ -1,9 +1,9 @@
-import Footer from "../../Components/Footer";
 import HandyFreeTools from "@/Pages/Tools/HandyFreeTools";
 
 import Hero from "../../Components/landing/Hero";
 import TemplateSelector from "../../Components/landing/TemplateSelector";
 import ToolsHub from "../../Components/landing/ToolsHub";
+import Footer from "../../Components/shared/footer/Footer";
 
 const Home = () => {
   return (
@@ -14,8 +14,7 @@ const Home = () => {
           <TemplateSelector />
           <ToolsHub />
           <HandyFreeTools />
-
-          <Footer></Footer>
+          <Footer />
         </main>
       </div>
     </>

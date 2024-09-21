@@ -1,15 +1,14 @@
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "@/Components/ChildrenComponents/ScrollToTop";
-import SideBar from "@/Components/SideBar";
-import BottomNavbar from "@/Components/BottomNavbar";
-import Navbar from "@/Components/Navbar";
+import SideBar from "../Components/shared/header/SideBar";
+import BottomNavbar from "../Components/shared/header/BottomNavbar";
+import Navbar from "../Components/shared/header/Navbar";
 const NavigationLayout = () => {
   return (
     <>
       <ScrollToTop />
       <div className=" bg-white dark:bg-black">
-        {/* Sidebar */}
-        {/* <SideBar /> */}
+        {/* <SideBar/> */}
         <Navbar />
         {/* Main content */}
         <div className="flex-1 overflow-y-auto">

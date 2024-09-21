@@ -1,10 +1,10 @@
-import Footer from "@/Components/Footer";
 import domtoimage from "dom-to-image";
 import { useRef, useState } from "react";
 import { MdFileDownload, MdOutlineCrop } from "react-icons/md";
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 const CropImageTool = () => {
   const [img, setImg] = useState("");
   const [downloading, setDownloading] = useState(false);
@@ -28,8 +28,8 @@ const CropImageTool = () => {
             transform: "scale(2)",
             transformOrigin: "top left",
             width: node.offsetWidth + "px",
-            height: node.offsetHeight + "px"
-          }
+            height: node.offsetHeight + "px",
+          },
         });
         const downloadLink = document.createElement("a");
         downloadLink.download = `pixlab_${Date.now()}.png`;

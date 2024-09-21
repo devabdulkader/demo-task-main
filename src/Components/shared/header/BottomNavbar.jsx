@@ -24,7 +24,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { RiHome2Line } from "react-icons/ri";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Button } from "./ui/button";
+import { Button } from "../../ui/button";
 
 const BottomNavbar = () => {
   const closeRef = useRef();

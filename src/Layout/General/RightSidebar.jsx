@@ -1,12 +1,12 @@
 import { CustomColor } from "@/Components/files/GradientsAndImages";
-import { positions } from "@/Components/files/positions";
-import { transformValues } from "@/Components/files/transforms";
+import { transformValues } from "../../constants/transforms";
 import Offer from "@/Components/Sponsors/Offer";
 import { HexAlphaColorPicker } from "react-colorful";
 import { FaRegFile } from "react-icons/fa";
 import { MdOutlineDelete, MdSettings } from "react-icons/md";
 import { Joystick } from "react-joystick-component";
 import { useLocation } from "react-router-dom";
+import { positions } from "../../constants/positions";
 
 const RightSidebar = ({
   tab,
@@ -62,7 +62,7 @@ const RightSidebar = ({
   custombgImage,
   setcustombgImage,
   solidColors,
-  setshowWatermark
+  setshowWatermark,
 }) => {
   const router = useLocation();
   return (
@@ -165,21 +165,21 @@ const RightSidebar = ({
                 name: "brightness",
                 min: 0,
                 max: 2,
-                step: 0.1
+                step: 0.1,
               },
               {
                 label: "Contrast",
                 name: "contrast",
                 min: 0,
                 max: 2,
-                step: 0.1
+                step: 0.1,
               },
               {
                 label: "Grayscale",
                 name: "grayscale",
                 min: 0,
                 max: 1,
-                step: 0.1
+                step: 0.1,
               },
               { label: "Blur", name: "blur", min: 0, max: 10, step: 0.5 },
               {
@@ -187,30 +187,30 @@ const RightSidebar = ({
                 name: "hueRotate",
                 min: 0,
                 max: 360,
-                step: 10
+                step: 10,
               },
               {
                 label: "Invert",
                 name: "invert",
                 min: 0,
                 max: 1,
-                step: 0.1
+                step: 0.1,
               },
               {
                 label: "Opacity",
                 name: "opacity",
                 min: 0,
                 max: 1,
-                step: 0.1
+                step: 0.1,
               },
               {
                 label: "Saturate",
                 name: "saturate",
                 min: 0,
                 max: 2,
-                step: 0.1
+                step: 0.1,
               },
-              { label: "Sepia", name: "sepia", min: 0, max: 1, step: 0.1 }
+              { label: "Sepia", name: "sepia", min: 0, max: 1, step: 0.1 },
             ].map(({ label, name, min, max, step }) => (
               <div
                 key={name}
@@ -255,14 +255,14 @@ const RightSidebar = ({
                     invert: 0,
                     saturate: 1,
                     sepia: 0,
-                    opacity: 1
+                    opacity: 1,
                   },
                   aspectRatio: 1 / 1,
                   backgroundColor: "#ffffff",
                   bgtheme: "gradient",
                   gradangle: 135,
                   gradientIndex: 4,
-                  currentImg: 3
+                  currentImg: 3,
                 });
                 settransform(" perspective(500px) rotateY(0deg) rotateX(0deg)");
                 setbr(0);
@@ -304,8 +304,8 @@ const RightSidebar = ({
                                                                                 `,
                     codetheme: "githubDark",
                     lang: "javascript",
-                    lineNo: false
-                  }
+                    lineNo: false,
+                  },
                 ]);
                 setgradientColor(
                   `linear-gradient(${canvasStyles.gradangle}deg, #FF002F, #FF0055, #FF007C)`
@@ -322,14 +322,14 @@ const RightSidebar = ({
                       invert: 0,
                       saturate: 1,
                       sepia: 0,
-                      opacity: 1
+                      opacity: 1,
                     },
                     aspectRatio: 1 / 1,
                     bgtheme: "gradient",
                     gradangle: 135,
                     gradientIndex: 27,
-                    currentImg: 3
-                  }
+                    currentImg: 3,
+                  },
                 });
 
                 const hexRegex = /#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g;
@@ -376,7 +376,7 @@ const RightSidebar = ({
               onClick={() => {
                 setCanvasStyles((prevStyles) => ({
                   ...prevStyles,
-                  bgtheme: "gradient"
+                  bgtheme: "gradient",
                 }));
               }}
               className={`w-full text-center py-2 rounded-[10px] cursor-pointer ${
@@ -393,7 +393,7 @@ const RightSidebar = ({
               onClick={() => {
                 setCanvasStyles((prevStyles) => ({
                   ...prevStyles,
-                  bgtheme: "image"
+                  bgtheme: "image",
                 }));
               }}
               className={`w-full text-center py-2 rounded-[10px] cursor-pointer ${
@@ -410,7 +410,7 @@ const RightSidebar = ({
               onClick={() => {
                 setCanvasStyles((prevStyles) => ({
                   ...prevStyles,
-                  bgtheme: "solid"
+                  bgtheme: "solid",
                 }));
               }}
               className={`w-full text-center py-2 rounded-[10px] cursor-pointer ${
@@ -454,7 +454,7 @@ const RightSidebar = ({
                     setgradientColor(gradient);
                     setCanvasStyles((prevStyles) => ({
                       ...prevStyles,
-                      gradientIndex: index
+                      gradientIndex: index,
                     }));
                     const hexRegex = /#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g;
                     const rgbaRegex =
@@ -496,7 +496,7 @@ const RightSidebar = ({
                     setgradientColor(solid);
                     setCanvasStyles((prevStyles) => ({
                       ...prevStyles,
-                      gradientIndex: index
+                      gradientIndex: index,
                     }));
                   }}
                   key={index}
@@ -525,7 +525,7 @@ const RightSidebar = ({
                   onClick={() => {
                     setCanvasStyles((prevStyles) => ({
                       ...prevStyles,
-                      currentImg: i + 1
+                      currentImg: i + 1,
                     }));
                     setbgImage("");
                     setcustombgImage(false);
@@ -562,7 +562,7 @@ const RightSidebar = ({
                             const newArr = [...content]; // create a copy of the original array
                             newArr[index] = {
                               ...item,
-                              title: e.target.value
+                              title: e.target.value,
                             }; // update the shadow property of the selected item
                             undoRedoFunc();
                             setcontent(newArr); // update the state with the new array
@@ -585,7 +585,7 @@ const RightSidebar = ({
                             ? "none"
                             : "flex",
                         alignItems: "flex-start",
-                        marginBottom: "24px"
+                        marginBottom: "24px",
                       }}
                     >
                       <div className="flex items-center cursor-pointer mt-4 relative py-0.5 px-3 border border-gray-300 dark:border-gray-600 rounded-2xl mr-4">
@@ -693,14 +693,14 @@ const RightSidebar = ({
                       style={{
                         display: "flex",
                         justifyContent: "space-evenly",
-                        alignItems: "flex-start"
+                        alignItems: "flex-start",
                       }}
                     >
                       <div
                         style={{
                           display: "flex",
                           flexDirection: "column",
-                          width: "100%"
+                          width: "100%",
                         }}
                       >
                         <div
@@ -713,7 +713,7 @@ const RightSidebar = ({
                                 ? "flex"
                                 : "none",
                             alignItems: "center",
-                            width: "100%"
+                            width: "100%",
                           }}
                         >
                           <span style={{ flex: 1 }} className="mr-2 md:mr-0">
@@ -735,7 +735,7 @@ const RightSidebar = ({
                               const newArr = [...content]; // create a copy of the original array
                               newArr[index] = {
                                 ...item,
-                                br: e.target.value
+                                br: e.target.value,
                               }; // update the shadow property of the selected item
                               undoRedoFunc();
                               setcontent(newArr); // update the state with the new array
@@ -754,7 +754,7 @@ const RightSidebar = ({
                               router.pathname !== "/device-mockups/[device]"
                                 ? "flex"
                                 : "none",
-                            alignItems: "center"
+                            alignItems: "center",
                           }}
                         >
                           {" "}
@@ -776,7 +776,7 @@ const RightSidebar = ({
                               const newArr = [...content]; // create a copy of the original array
                               newArr[index] = {
                                 ...item,
-                                shadow: e.target.value
+                                shadow: e.target.value,
                               }; // update the shadow property of the selected item
                               undoRedoFunc();
                               setcontent(newArr); // update the state with the new array
@@ -791,7 +791,7 @@ const RightSidebar = ({
                             marginBottom: "8px",
                             fontWeight: "500",
                             display: "flex",
-                            alignItems: "center"
+                            alignItems: "center",
                           }}
                         >
                           {" "}
@@ -810,7 +810,7 @@ const RightSidebar = ({
                               const newArr = [...content];
                               newArr[index] = {
                                 ...item,
-                                pdng: e.target.value
+                                pdng: e.target.value,
                               };
                               undoRedoFunc();
                               setcontent(newArr);
@@ -823,7 +823,7 @@ const RightSidebar = ({
                             marginBottom: "8px",
                             fontWeight: "500",
                             display: "flex",
-                            alignItems: "center"
+                            alignItems: "center",
                           }}
                         >
                           {" "}
@@ -842,7 +842,7 @@ const RightSidebar = ({
                               const newArr = [...content];
                               newArr[index] = {
                                 ...item,
-                                scale: e.target.value
+                                scale: e.target.value,
                               };
                               undoRedoFunc();
                               setcontent(newArr);
@@ -860,7 +860,7 @@ const RightSidebar = ({
                             const newArr = [...content]; // create a copy of the original array
                             newArr[index] = {
                               ...item,
-                              transform: transformValue
+                              transform: transformValue,
                             }; // update the shadow property of the selected item
                             undoRedoFunc();
                             setcontent(newArr); // update the state with the new array
@@ -892,7 +892,7 @@ const RightSidebar = ({
                                 const newArr = [...content]; // create a copy of the original array
                                 newArr[index] = {
                                   ...item,
-                                  transform: transformValue
+                                  transform: transformValue,
                                 }; // update the shadow property of the selected item
                                 undoRedoFunc();
                                 setcontent(newArr); // update the state with the new array
@@ -909,7 +909,7 @@ const RightSidebar = ({
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        marginTop: "8px"
+                        marginTop: "8px",
                       }}
                     >
                       <h6 className="flex items-center text-sm font-medium">
@@ -929,19 +929,19 @@ const RightSidebar = ({
                               newArr[index] = {
                                 ...item,
                                 frame: e.target.value,
-                                scale: s
+                                scale: s,
                               }; // update the shadow property of the selected item
                               undoRedoFunc();
                               setCanvasStyles((prevStyles) => ({
                                 ...prevStyles,
-                                aspectRatio: 1
+                                aspectRatio: 1,
                               }));
                               setcontent(newArr); // update the state with the new array
                             } else {
                               const newArr = [...content]; // create a copy of the original array
                               newArr[index] = {
                                 ...item,
-                                frame: e.target.value
+                                frame: e.target.value,
                               }; // update the shadow property of the selected item
                               undoRedoFunc();
                               setcontent(newArr); // update the state with the new array
@@ -999,7 +999,7 @@ const RightSidebar = ({
                           alignItems: "center",
                           padding: "2px 12px",
                           border: "1px solid rgb(80,80,80)",
-                          borderRadius: "18px"
+                          borderRadius: "18px",
                         }}
                       >
                         <span
@@ -1018,7 +1018,7 @@ const RightSidebar = ({
                             borderRadius: "50%",
                             backgroundColor: scolor,
                             border: "1px solid gray",
-                            marginLeft: "4px"
+                            marginLeft: "4px",
                           }}
                           onClick={() => {
                             setshowScolorPalette(!showScolorPalette);
@@ -1036,7 +1036,7 @@ const RightSidebar = ({
                               left: "-100px",
                               top: "32px",
                               display: "flex",
-                              flexDirection: "column"
+                              flexDirection: "column",
                             }}
                           >
                             <HexAlphaColorPicker
@@ -1059,7 +1059,7 @@ const RightSidebar = ({
                                   margin: "4px",
                                   padding: "0px 8px",
                                   border: "none",
-                                  borderRadius: "4px"
+                                  borderRadius: "4px",
                                 }}
                               >
                                 {item.scolor}
@@ -1072,7 +1072,7 @@ const RightSidebar = ({
                                   margin: "4px",
                                   padding: "0px 8px",
                                   border: "none",
-                                  borderRadius: "4px"
+                                  borderRadius: "4px",
                                 }}
                                 onClick={() => setshowScolorPalette(false)}
                               >
@@ -1115,7 +1115,7 @@ const RightSidebar = ({
                               const newArr = [...content];
                               newArr[index] = {
                                 ...item,
-                                codetheme: e.target.value
+                                codetheme: e.target.value,
                               };
                               undoRedoFunc();
                               setcontent(newArr);
@@ -1164,7 +1164,7 @@ const RightSidebar = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            transform: transformValue
+                            transform: transformValue,
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1195,7 +1195,7 @@ const RightSidebar = ({
                           filter: !modalIsOn
                             ? `brightness(${canvasStyles.canvasFilters.brightness}) contrast(${canvasStyles.canvasFilters.contrast}) grayscale(${canvasStyles.canvasFilters.grayscale}) blur(${canvasStyles.canvasFilters.blur}px) hue-rotate(${canvasStyles.canvasFilters.hueRotate}deg) invert(${canvasStyles.canvasFilters.invert}) opacity(${canvasStyles.canvasFilters.opacity}) saturate(${canvasStyles.canvasFilters.saturate}) sepia(${canvasStyles.canvasFilters.sepia})`
                             : "",
-                          opacity: dwGif ? opacity : 1
+                          opacity: dwGif ? opacity : 1,
                         }}
                       >
                         <div

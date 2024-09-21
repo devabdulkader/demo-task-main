@@ -1,8 +1,8 @@
-import Footer from "@/Components/Footer";
 import React, { useRef, useState } from "react";
 import { MdFileDownload, MdFileUpload } from "react-icons/md";
 import { toast } from "react-toastify";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 export default function ImageResizer() {
   const [image, setImage] = useState(null);
   const [width, setWidth] = useState(0);
@@ -52,7 +52,7 @@ export default function ImageResizer() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark"
+        theme: "dark",
       });
     }
   };

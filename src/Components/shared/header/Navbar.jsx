@@ -45,13 +45,13 @@ import {
   User,
   UserPlus,
 } from "lucide-react";
-import ConfettiButton from "./Confetti";
+import ConfettiButton from "../../Confetti";
 
 import { CiDark } from "react-icons/ci";
 import { BsArrowRight } from "react-icons/bs";
 import { MdOutlineAccountTree } from "react-icons/md";
+import { useAppContext } from "../../../context";
 import ModeToggle from "./ModeToggle";
-import { useAppContext } from "../context";
 
 const navLinks = [
   { href: "/", label: "Home" },

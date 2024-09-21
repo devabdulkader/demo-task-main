@@ -1,4 +1,3 @@
-import Footer from "@/Components/Footer";
 import gifshot from "gifshot";
 import React, { useRef, useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
@@ -6,6 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { MdFileDownload, MdPermMedia } from "react-icons/md";
 import { toast } from "react-toastify";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 const GifGenerator = () => {
   const [images, setImages] = useState([]);
   const [gifDuration, setGifDuration] = useState(2000);
@@ -58,7 +58,7 @@ const GifGenerator = () => {
           interval: gifDuration / images.length / 1000,
           numWorkers: 2,
           gifWidth: gifWidth,
-          gifHeight: gifHeight
+          gifHeight: gifHeight,
         },
         function (obj) {
           if (!obj.error) {
@@ -78,7 +78,7 @@ const GifGenerator = () => {
               closeOnClick: false,
               pauseOnHover: true,
               draggable: true,
-              progress: undefined
+              progress: undefined,
             });
           }
         }

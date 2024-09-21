@@ -2,7 +2,7 @@ import React from "react";
 
 const ToolsHub = () => {
   return (
-    <div className=" gradient-middle py-20">
+    <div className=" gradient-template  py-20">
       <div className="relative text-center max-w-3xl mx-auto">
         <h1 className="text-white text-5xl lg:text-7xl font-semibold">
           All the Tools You Need in One Dashboard
@@ -13,11 +13,11 @@ const ToolsHub = () => {
           media content in minutes.
         </p>
       </div>
-      <section className="flex flex-col lg:flex-row justify-between gap-10 w-full mt-12 px-10 ">
+      <section className="flex flex-col xl:flex-row justify-between gap-10 w-full mt-12 px-5 lg:px-10 ">
         {/* First div - 60% width */}
         <div className="xl:w-[60%] flex flex-col gap-4 rounded-[40px] gradient-toolshub darker-box-shadow">
           {/* First div inside with one image */}
-          <div className="py-5">
+          <div className="py-10">
             <h1 className="text-white text-center font-semibold text-[2.2rem]">
               Unleash Your Creativity with Powerful Online Tools
             </h1>
@@ -28,24 +28,24 @@ const ToolsHub = () => {
           </div>
           {/* Second div inside with two images side by side */}
           <section className="">
-            <div className="flex justify-center px-20">
+            <div className="flex justify-center lg:px-20 xl:px-10 mb-5">
               <img
                 src="/shot.webp"
                 alt="Sub Image 1"
-                className=" rounded-[40px] h-[500px] w-[90%]"
+                className=" rounded-[30px] lg:h-[500px] xl:h-[400px] 2xl:h-[500px] lg:w-[90%] object-cover"
               />
             </div>
             {/* Two images at the bottom */}
-            <div className="flex justify-between gap-4 relative -top-20">
+            <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-between lg:gap-4 relative lg:-top-20">
               <img
                 src="/landing/code.svg"
                 alt="Bottom Image 1"
-                className="w-[500px] h-[300px] rounded-[40px]"
+                className="lg:h-[300px] 2xl:h-[300px] xl:h-auto rounded-[40px] object-cover"
               />
               <img
                 src="/landing/insta.svg"
                 alt="Bottom Image 2"
-                className="w-[500px] h-[300px] rounded-[40px]"
+                className="lg:h-[300px] 2xl:h-[300px] xl:h-auto rounded-[40px] object-cover"
               />
             </div>
           </section>
@@ -53,7 +53,7 @@ const ToolsHub = () => {
 
         {/* Second div - 40% width */}
         <div
-          className="xl:w-[40%] h-[950px] rounded-[40px] overflow-hidden"
+          className="xl:w-[40%] lg:h-[1000px] pb-20 rounded-[40px] overflow-hidden"
           style={{ backgroundImage: 'url("/landing/gradient-bg.svg")' }}
         >
           <img

@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-import Footer from "../Footer";
+import Footer from "../shared/footer/Footer";
 import { useAppContext } from "@/context";
 import HandyFreeTools from "@/Pages/Tools/HandyFreeTools";
 import {

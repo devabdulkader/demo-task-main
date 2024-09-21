@@ -1,4 +1,3 @@
-import Footer from "@/Components/Footer";
 import domtoimage from "dom-to-image";
 import React, { useEffect, useRef, useState } from "react";
 import { HexAlphaColorPicker } from "react-colorful";
@@ -6,6 +5,7 @@ import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import { Joystick } from "react-joystick-component";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 const gradients = [
   "linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)",
   "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)",
@@ -27,7 +27,7 @@ const gradients = [
   "linear-gradient(to right top, #4158D0, #C850C0, #FFCC70)",
   "linear-gradient(to right top, #0093E9, #80D0C7)",
   "linear-gradient(to right top, #8EC5FC, #E0C3FC)",
-  "linear-gradient(to right top, #85FFBD, #FFFB7D)"
+  "linear-gradient(to right top, #85FFBD, #FFFB7D)",
 ];
 
 const IconGenerator = () => {
@@ -77,13 +77,13 @@ const IconGenerator = () => {
       transform: `scale(${scale})`,
       transformOrigin: "top left",
       width: node.offsetWidth + "px",
-      height: node.offsetHeight + "px"
+      height: node.offsetHeight + "px",
     };
     const param = {
       height: node.offsetHeight * scale,
       width: node.offsetWidth * scale,
       quality: 1,
-      style
+      style,
     };
 
     domtoimage
@@ -122,7 +122,7 @@ const IconGenerator = () => {
                       shadow > 0 ? "2px" : "0px"
                     } rgba(0, 0, 0,0.5)`,
                     transform: transform,
-                    backgroundColor: backColor
+                    backgroundColor: backColor,
                   }}
                 >
                   {React.createElement(
@@ -131,7 +131,7 @@ const IconGenerator = () => {
                       : FaIcons[iconName],
                     {
                       size: size,
-                      color: color
+                      color: color,
                     }
                   )}
                 </div>
@@ -264,7 +264,7 @@ const IconGenerator = () => {
         </div>
       </section>
       <HandyFreeTools toolsTitle={"You might also like"} />
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
@@ -492,5 +492,5 @@ export const oldGradients = [
   "linear-gradient(to right, #333, #555, #777)",
   "linear-gradient(to top left, #1a1a1a, #333333, #4d4d4d)",
   "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
-  "linear-gradient(225deg, #FFFEFF 0%, #D7FFFE 100%)"
+  "linear-gradient(225deg, #FFFEFF 0%, #D7FFFE 100%)",
 ];

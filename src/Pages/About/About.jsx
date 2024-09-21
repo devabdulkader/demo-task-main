@@ -1,15 +1,15 @@
-import BottomNavbar from "@/Components/BottomNavbar";
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
 import {
   FiDownload,
   FiEdit3,
   FiFeather,
   FiGrid,
   FiLayers,
-  FiShare2
+  FiShare2,
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import Navbar from "../../Components/shared/header/Navbar";
+import Footer from "../../Components/shared/footer/Footer";
+import BottomNavbar from "../../Components/shared/header/BottomNavbar";
 
 export const Feature = ({ icon, title, description }) => (
   <div className="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
@@ -352,7 +352,7 @@ const About = () => {
         </section>
       </main>
 
-      <Footer></Footer>
+      <Footer />
 
       <BottomNavbar />
     </div>

@@ -73,13 +73,26 @@ body {
 }
 
 /* Base gradient */
-.gradient-middle {
+/* .gradient-middle {
   background: linear-gradient(
     90deg,
-    rgb(19, 14, 16) 25%,
+    rgb(19, 14, 16) 10%,
     rgb(52, 24, 27) 50%,
-    rgb(19, 14, 16) 75%
+    rgb(19, 14, 16) 90%
   );
+} */
+.gradient-middle {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 10%,
+      rgb(52, 24, 27) 50%,
+      rgb(19, 14, 16) 90%
+    );
 }
 
 /* Gradient for small screens */
@@ -940,13 +953,44 @@ pre {
   background: #f1f1f1;
 }
 
-.gradient-template {
+/* .gradient-template {
   background: linear-gradient(
     90deg,
     rgb(19, 14, 16) 25%,
     rgb(52, 24, 27) 50%,
     rgb(19, 14, 16) 75%
   );
+} */
+
+/* .gradient-template {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 25%,
+      rgb(52, 24, 27) 50%,
+      rgb(19, 14, 16) 75%
+    );
+} */
+
+.gradient-template {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      /* Dark at the top */ rgba(0, 0, 0, 0) 30%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0) 70%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0.8) 100%
+        /* Dark at the bottom */
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 25%,
+      /* Darker sides */ rgb(52, 24, 27) 50%,
+      /* Reddish middle */ rgb(19, 14, 16) 75% /* Darker sides */
+    );
 }
 
 .gradient-div {
@@ -969,11 +1013,7 @@ pre {
 }
 
 .gradient-toolshub {
-  background: radial-gradient(
-    circle,
-    rgb(58, 18, 24) 30%,
-    /* Center color */ rgb(6, 2, 2) 70% /* Darker edges */
-  );
+  background: radial-gradient(circle, rgb(58, 18, 24) 30%, rgb(6, 2, 2) 70%);
 }
 
 .darker-box-shadow {

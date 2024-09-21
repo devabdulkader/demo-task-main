@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { MdFileDownload, MdSearch } from "react-icons/md";
 import { toast } from "react-toastify";
 import HandyFreeTools from "../Tools/HandyFreeTools";
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/shared/footer/Footer";
 const GoogleSuggestion = () => {
   const [downloading, setDownloading] = useState(false);
   const divRef = useRef();
@@ -17,13 +17,13 @@ const GoogleSuggestion = () => {
       transform: `scale(${scale})`,
       transformOrigin: "top left",
       width: `${node.offsetWidth}px`,
-      height: `${node.offsetHeight}px`
+      height: `${node.offsetHeight}px`,
     };
     const param = {
       height: node.offsetHeight * scale,
       width: node.offsetWidth * scale,
       quality: 1,
-      style
+      style,
     };
 
     domtoimage
@@ -41,7 +41,7 @@ const GoogleSuggestion = () => {
           closeOnClick: false,
           pauseOnHover: true,
           draggable: true,
-          progress: undefined
+          progress: undefined,
         });
       })
       .catch((error) => {
@@ -58,7 +58,7 @@ const GoogleSuggestion = () => {
       const response = await fetch(`${host}/api/update-analytics`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({})
+        body: JSON.stringify({}),
       });
       await response.json();
     } catch (error) {
@@ -108,7 +108,7 @@ const GoogleSuggestion = () => {
                 "if you like",
                 "this feature",
                 "tell your friends",
-                "about pixlab"
+                "about pixlab",
               ].map((suggestion, index) => (
                 <div key={index} className="flex items-center pb-2">
                   <MdSearch size={24} className="text-gray-400 mr-2" />
@@ -159,7 +159,7 @@ const GoogleSuggestion = () => {
         <HandyFreeTools toolsTitle={"You might also like"} />
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 };

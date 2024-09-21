@@ -1,5 +1,5 @@
-import BottomNavbar from "@/Components/BottomNavbar";
 import { Link } from "react-router-dom";
+import BottomNavbar from "../../Components/shared/header/BottomNavbar";
 const Videos = ({}) => {
   return (
     <>
@@ -41,8 +41,8 @@ export const vidTemplates = [
     thumbnail: "/FeatureGraphic.webp",
     link: "/videos/typewriter",
     slug: "typewriter",
-    description: "Create a typewriter typing animation"
-  }
+    description: "Create a typewriter typing animation",
+  },
   // {
   //   title: "Animated stats",
   //   thumbnail: "/FeatureGraphic.webp",

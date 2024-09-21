@@ -1,7 +1,7 @@
-import Footer from "@/Components/Footer";
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 export default function ImageColorPicker() {
   const [colorFormat, setColorFormat] = useState("hex");
   const [palette, setPalette] = useState([]);
@@ -90,7 +90,7 @@ export default function ImageColorPicker() {
     return {
       r: Math.round(r / factor) * factor,
       g: Math.round(g / factor) * factor,
-      b: Math.round(b / factor) * factor
+      b: Math.round(b / factor) * factor,
     };
   };
 
@@ -120,7 +120,7 @@ export default function ImageColorPicker() {
       ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16)
+          b: parseInt(result[3], 16),
         }
       : null;
   };
@@ -131,7 +131,7 @@ export default function ImageColorPicker() {
       ? {
           r: parseInt(match[1]),
           g: parseInt(match[2]),
-          b: parseInt(match[3])
+          b: parseInt(match[3]),
         }
       : null;
   };
@@ -290,7 +290,7 @@ export default function ImageColorPicker() {
                       closeOnClick: false,
                       pauseOnHover: true,
                       draggable: true,
-                      theme: "dark"
+                      theme: "dark",
                     });
                   }}
                 ></div>
@@ -320,7 +320,7 @@ export default function ImageColorPicker() {
                             closeOnClick: false,
                             pauseOnHover: true,
                             draggable: true,
-                            theme: "dark"
+                            theme: "dark",
                           });
                         }}
                       ></div>

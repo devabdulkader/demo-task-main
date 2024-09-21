@@ -1,7 +1,6 @@
 import FontsYard from "@/Components/Fonts/FontsYard";
 import Offer from "@/Components/Sponsors/Offer";
 import { CustomColor } from "@/Components/files/GradientsAndImages";
-import { transformValues } from "@/Components/files/transforms";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { HexAlphaColorPicker } from "react-colorful";
 import { BiFontSize, BiText } from "react-icons/bi";
@@ -10,16 +9,17 @@ import {
   FaItalic,
   FaLayerGroup,
   FaRegFile,
-  FaUnderline
+  FaUnderline,
 } from "react-icons/fa";
 import {
   MdAdd,
   MdDragIndicator,
   MdOutlineDelete,
   MdRemove,
-  MdSettings
+  MdSettings,
 } from "react-icons/md";
 import { Joystick } from "react-joystick-component";
+import { transformValues } from "../../constants/transforms";
 
 const EditOptionsDesign = ({
   tab,
@@ -87,7 +87,7 @@ const EditOptionsDesign = ({
   setcurrentActive,
   currentTag,
   canvasWidth,
-  custombgImage
+  custombgImage,
 }) => {
   function onDragEnd(result) {
     if (!result.destination) return;
@@ -112,7 +112,7 @@ const EditOptionsDesign = ({
             tab === 2 ? "shadow-md" : ""
           } font-semibold hover:bg-gray-200 dark:hover:bg-[#121212] mx-1`}
           style={{
-            background: tab === 2 ? "" : ""
+            background: tab === 2 ? "" : "",
           }}
         >
           <MdSettings size={18} />
@@ -178,7 +178,7 @@ const EditOptionsDesign = ({
                             padding: "4px",
                             display: "flex",
                             alignItems: "center",
-                            borderRadius: "1rem"
+                            borderRadius: "1rem",
                           }}
                         >
                           <MdDragIndicator
@@ -211,14 +211,14 @@ const EditOptionsDesign = ({
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              marginTop: "8px"
+              marginTop: "8px",
             }}
           >
             <h6
               style={{
                 display: "flex",
                 alignItems: "center",
-                fontSize: "14px"
+                fontSize: "14px",
               }}
             >
               Quality
@@ -256,7 +256,7 @@ const EditOptionsDesign = ({
               style={{
                 display: "flex",
                 alignItems: "center",
-                fontSize: "14px"
+                fontSize: "14px",
               }}
             >
               Format
@@ -302,7 +302,7 @@ const EditOptionsDesign = ({
               fontWeight: "500",
               display: "flex",
               alignItems: "center",
-              marginTop: "16px"
+              marginTop: "16px",
             }}
           >
             <label style={{ flex: 0.5 }}>Brightness:</label>
@@ -323,7 +323,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Contrast:</label>
@@ -344,7 +344,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Grayscale:</label>
@@ -365,7 +365,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Blur:</label>
@@ -386,7 +386,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Hue-rotate:</label>
@@ -407,7 +407,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Invert:</label>
@@ -428,7 +428,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Opacity:</label>
@@ -449,7 +449,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Saturate:</label>
@@ -470,7 +470,7 @@ const EditOptionsDesign = ({
               marginBottom: "8px",
               fontWeight: "500",
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <label style={{ flex: 0.5 }}>Sepia:</label>
@@ -515,14 +515,14 @@ const EditOptionsDesign = ({
                     invert: 0,
                     saturate: 1,
                     sepia: 0,
-                    opacity: 1
+                    opacity: 1,
                   },
                   aspectRatio: 1 / 1,
                   backgroundColor: "#ffffff",
                   bgtheme: "gradient",
                   gradangle: 135,
                   gradientIndex: 4,
-                  currentImg: 3
+                  currentImg: 3,
                 }));
                 settransform(
                   "translate(-50%,-50%) perspective(500px) rotateY(0deg) rotateX(0deg)"
@@ -548,14 +548,14 @@ const EditOptionsDesign = ({
                       invert: 0,
                       saturate: 1,
                       sepia: 0,
-                      opacity: 1
+                      opacity: 1,
                     },
                     aspectRatio: 1 / 1,
                     bgtheme: "gradient",
                     gradangle: 135,
                     gradientIndex: 27,
-                    currentImg: 3
-                  }
+                    currentImg: 3,
+                  },
                 });
 
                 const hexRegex = /#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g;
@@ -602,7 +602,7 @@ const EditOptionsDesign = ({
               background: dm ? "black" : "white",
               // border: "none",
               border: "1px solid rgb(80,80,80)",
-              marginTop: "8px"
+              marginTop: "8px",
             }}
             className="flex items-center text-sm"
           >
@@ -626,7 +626,7 @@ const EditOptionsDesign = ({
               onClick={() => {
                 setCanvasStyles((prevStyles) => ({
                   ...prevStyles,
-                  bgtheme: "gradient"
+                  bgtheme: "gradient",
                 }));
               }}
               className={`w-full text-center py-2 rounded-[10px] cursor-pointer ${
@@ -643,7 +643,7 @@ const EditOptionsDesign = ({
               onClick={() => {
                 setCanvasStyles((prevStyles) => ({
                   ...prevStyles,
-                  bgtheme: "image"
+                  bgtheme: "image",
                 }));
               }}
               className={`w-full text-center py-2 rounded-[10px] cursor-pointer ${
@@ -660,7 +660,7 @@ const EditOptionsDesign = ({
               onClick={() => {
                 setCanvasStyles((prevStyles) => ({
                   ...prevStyles,
-                  bgtheme: "solid"
+                  bgtheme: "solid",
                 }));
               }}
               className={`w-full text-center py-2 rounded-[10px] cursor-pointer ${
@@ -681,7 +681,7 @@ const EditOptionsDesign = ({
                 canvasStyles.bgtheme === "gradient" && showExtra
                   ? "flex"
                   : "none",
-              marginTop: "12px"
+              marginTop: "12px",
             }}
           >
             {customGrad.map((color, index) => (
@@ -709,7 +709,7 @@ const EditOptionsDesign = ({
                     undoRedoFunc();
                     setCanvasStyles((prevStyles) => ({
                       ...prevStyles,
-                      gradientIndex: index
+                      gradientIndex: index,
                     }));
                     // const regex = /#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g;
                     // const colors = gradient.match(regex);
@@ -761,7 +761,7 @@ const EditOptionsDesign = ({
                     undoRedoFunc();
                     setCanvasStyles((prevStyles) => ({
                       ...prevStyles,
-                      gradientIndex: index
+                      gradientIndex: index,
                     }));
                   }}
                   key={index}
@@ -809,7 +809,7 @@ const EditOptionsDesign = ({
                         undoRedoFunc();
                         setCanvasStyles((prevStyles) => ({
                           ...prevStyles,
-                          currentImg: i + 1
+                          currentImg: i + 1,
                         }));
                         setbgImage("");
                         setcustombgImage(false);
@@ -883,7 +883,7 @@ const EditOptionsDesign = ({
                               const newArr = [...content];
                               newArr[index] = {
                                 ...item,
-                                shadow: e.target.value
+                                shadow: e.target.value,
                               };
                               undoRedoFunc();
                               setcontent(newArr);
@@ -919,7 +919,7 @@ const EditOptionsDesign = ({
                             const newArr = [...content];
                             newArr[index] = {
                               ...item,
-                              transform: transformValue
+                              transform: transformValue,
                             };
                             undoRedoFunc();
                             setcontent(newArr);
@@ -945,7 +945,7 @@ const EditOptionsDesign = ({
                               const newArr = [...content];
                               newArr[index] = {
                                 ...item,
-                                transform: transformValue
+                                transform: transformValue,
                               };
                               undoRedoFunc();
                               setcontent(newArr);
@@ -1056,7 +1056,7 @@ const EditOptionsDesign = ({
                             const newArr = [...content];
                             newArr[index] = {
                               ...item,
-                              transform: transformValue
+                              transform: transformValue,
                             };
                             undoRedoFunc();
                             setcontent(newArr);
@@ -1080,7 +1080,7 @@ const EditOptionsDesign = ({
                             filter: !modalIsOn
                               ? `brightness(${canvasStyles.canvasFilters.brightness}) contrast(${canvasStyles.canvasFilters.contrast}) grayscale(${canvasStyles.canvasFilters.grayscale}) blur(${canvasStyles.canvasFilters.blur}px) hue-rotate(${canvasStyles.canvasFilters.hueRotate}deg) invert(${canvasStyles.canvasFilters.invert})  opacity(${canvasStyles.canvasFilters.opacity}) saturate(${canvasStyles.canvasFilters.saturate}) sepia(${canvasStyles.canvasFilters.sepia})`
                               : "",
-                            opacity: dwGif ? opacity : 1
+                            opacity: dwGif ? opacity : 1,
                           }}
                         >
                           <div
@@ -1117,7 +1117,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            fontSize: Math.max(1, item.fontSize - 1)
+                            fontSize: Math.max(1, item.fontSize - 1),
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1136,7 +1136,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            fontSize: Math.floor(e.target.value)
+                            fontSize: Math.floor(e.target.value),
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1148,7 +1148,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            fontSize: Math.min(canvasWidth, item.fontSize + 1)
+                            fontSize: Math.min(canvasWidth, item.fontSize + 1),
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1197,7 +1197,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            underline: !item.underline
+                            underline: !item.underline,
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1274,7 +1274,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            fontShadow: Math.max(1, item.fontShadow - 1)
+                            fontShadow: Math.max(1, item.fontShadow - 1),
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1293,7 +1293,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            fontShadow: Math.floor(e.target.value)
+                            fontShadow: Math.floor(e.target.value),
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1308,7 +1308,7 @@ const EditOptionsDesign = ({
                             fontShadow: Math.min(
                               canvasWidth,
                               item.fontShadow + 1
-                            )
+                            ),
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1362,7 +1362,7 @@ const EditOptionsDesign = ({
                                 const newArr = [...content];
                                 newArr[index] = {
                                   ...item,
-                                  shadow: e.target.value
+                                  shadow: e.target.value,
                                 };
                                 undoRedoFunc();
                                 setcontent(newArr);
@@ -1382,7 +1382,7 @@ const EditOptionsDesign = ({
                                 const newArr = [...content];
                                 newArr[index] = {
                                   ...item,
-                                  size: e.target.value
+                                  size: e.target.value,
                                 };
                                 undoRedoFunc();
                                 setcontent(newArr);
@@ -1669,7 +1669,7 @@ const EditOptionsDesign = ({
                             const newArr = [...content];
                             newArr[index] = {
                               ...item,
-                              transform: e.target.value
+                              transform: e.target.value,
                             };
                             undoRedoFunc();
                             setcontent(newArr);
@@ -1761,7 +1761,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            transform: transformValue
+                            transform: transformValue,
                           };
                           undoRedoFunc();
                           setcontent(newArr);
@@ -1787,7 +1787,7 @@ const EditOptionsDesign = ({
                             const newArr = [...content];
                             newArr[index] = {
                               ...item,
-                              transform: transformValue
+                              transform: transformValue,
                             };
                             undoRedoFunc();
                             setcontent(newArr);
@@ -1903,7 +1903,7 @@ const EditOptionsDesign = ({
                           const newArr = [...content];
                           newArr[index] = {
                             ...item,
-                            codetheme: e.target.value
+                            codetheme: e.target.value,
                           };
                           undoRedoFunc();
                           setcontent(newArr);

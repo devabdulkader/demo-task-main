@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Left Image Div */}
-      <div
+      {/* <div
         className="absolute top-0 left-0 h-full hidden sm:block"
         style={{
           width: "20%", // 1/4 width of the screen
@@ -12,12 +12,14 @@ const Hero = () => {
           zIndex: "10",
         }}
       >
-        {/* Fade Effect (Fully fade to the right) */}
         <div className="absolute inset-0 bg-gradient-to-l from-[#140E10] via-[#140E10]/10 to-transparent"></div>
-      </div>
-
+      </div> */}
+      <img
+        src="/landing/left-side-pattern.svg"
+        className="absolute -top-20 -left-[400px] h-auto z-20"
+      />
       {/* Right Image Div */}
-      <div
+      {/* <div
         className="absolute top-0 right-0 h-full hidden sm:block"
         style={{
           width: "20%", // 1/4 width of the screen
@@ -27,10 +29,12 @@ const Hero = () => {
           zIndex: "10",
         }}
       >
-        {/* Fade Effect (Fade on the left side) */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#140E10] to-transparent"></div>
-      </div>
-
+      </div> */}
+      <img
+        src="/landing/right-side-pattern.svg"
+        className="absolute -top-20 -right-[400px] h-auto z-20"
+      />
       {/* Gradient Overlay for the Entire Hero Section */}
       <div className=" absolute inset-0 gradient-middle " />
 

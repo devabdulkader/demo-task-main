@@ -11,8 +11,8 @@ import {
   User,
   UserPlus,
 } from "lucide-react";
-import { useAppContext } from "../context";
-import ConfettiButton from "./Confetti";
+import { useAppContext } from "../../../context";
+import ConfettiButton from "../../Confetti";
 import ModeToggle from "./ModeToggle";
 const SideBar = () => {
   const context = useAppContext();

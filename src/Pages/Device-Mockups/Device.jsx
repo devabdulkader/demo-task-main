@@ -1,6 +1,6 @@
-import { devices } from "@/Components/files/devices";
 import MainLayout from "@/Layout/General/MainLayout";
 import { useParams } from "react-router-dom";
+import { devices } from "../../constants/devices";
 
 const Device = () => {
   const { device } = useParams();
@@ -8,7 +8,6 @@ const Device = () => {
   console.log("🚀 ~ Device ~ deviceTitle:", deviceTitle, device);
   return (
     <>
-
       <h1 style={{ display: "none" }}>
         {deviceTitle ? `${deviceTitle} Mockup` : "Device Mockup"}
       </h1>

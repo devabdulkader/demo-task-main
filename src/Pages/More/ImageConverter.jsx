@@ -1,8 +1,8 @@
-import Footer from "@/Components/Footer";
 import domtoimage from "dom-to-image";
 import React, { useEffect, useRef, useState } from "react";
 import { MdFileDownload } from "react-icons/md";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 export default function ImageConverter() {
   const canvasRef = useRef(null);
   const imgRef = useRef(null);
@@ -36,7 +36,7 @@ export default function ImageConverter() {
       png: domtoimage.toPng,
       jpeg: domtoimage.toJpeg,
       svg: domtoimage.toSvg,
-      webp: convertImageToWebP
+      webp: convertImageToWebP,
     };
 
     conversionMethods[imageType](node).then((dataUrl) => {

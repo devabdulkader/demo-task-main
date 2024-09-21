@@ -1,7 +1,7 @@
-import ModeToggle from "@/Components/ModeToggle";
 import { BiRedo, BiUndo } from "react-icons/bi";
 import { MdFileDownload, MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import ModeToggle from "../../Components/shared/header/ModeToggle";
 
 const NavDesign = ({
   format,
@@ -30,7 +30,7 @@ const NavDesign = ({
   setgradientColor,
   setMainState,
   setcustomGrad,
-  designprops
+  designprops,
 }) => {
   return (
     <nav
@@ -79,7 +79,7 @@ const NavDesign = ({
               undoRedoFunc();
               setCanvasStyles((prevStyles) => ({
                 ...prevStyles,
-                aspectRatio: e.target.value
+                aspectRatio: e.target.value,
               }));
 
               setTimeout(() => {
@@ -134,7 +134,7 @@ const NavDesign = ({
                 const prevMainState = undoHistory[undoHistory.length - 1];
                 setRedoHistory((prevRedoHistory) => [
                   ...prevRedoHistory,
-                  mainState
+                  mainState,
                 ]);
                 setUndoHistory((prevUndoHistory) =>
                   prevUndoHistory.slice(0, prevUndoHistory.length - 1)
@@ -156,7 +156,7 @@ const NavDesign = ({
                 const nextMainState = redoHistory[redoHistory.length - 1];
                 setUndoHistory((prevUndoHistory) => [
                   ...prevUndoHistory,
-                  mainState
+                  mainState,
                 ]);
                 setRedoHistory((prevRedoHistory) =>
                   prevRedoHistory.slice(0, prevRedoHistory.length - 1)
@@ -186,14 +186,14 @@ const NavDesign = ({
                     invert: 0,
                     saturate: 1,
                     sepia: 0,
-                    opacity: 1
+                    opacity: 1,
                   },
                   aspectRatio: 1 / 1,
                   backgroundColor: "#ffffff",
                   bgtheme: "gradient",
                   gradangle: 135,
                   gradientIndex: 27,
-                  currentImg: 3
+                  currentImg: 3,
                 }));
                 settransform(
                   "translate(-50%,-50%) perspective(500px) rotateY(0deg) rotateX(0deg)"
@@ -219,14 +219,14 @@ const NavDesign = ({
                       invert: 0,
                       saturate: 1,
                       sepia: 0,
-                      opacity: 1
+                      opacity: 1,
                     },
                     aspectRatio: 1 / 1,
                     bgtheme: "gradient",
                     gradangle: 135,
                     gradientIndex: 27,
-                    currentImg: 3
-                  }
+                    currentImg: 3,
+                  },
                 });
 
                 const hexRegex = /#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})/g;

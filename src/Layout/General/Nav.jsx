@@ -1,7 +1,6 @@
-import ModeToggle from "@/Components/ModeToggle";
 import { MdFileDownload } from "react-icons/md";
 import { Link } from "react-router-dom";
-
+import ModeToggle from "../../Components/shared/header/ModeToggle";
 const Nav = ({
   canvasStyles,
   setCanvasHeight,
@@ -11,7 +10,7 @@ const Nav = ({
   saveImage,
   handleDownload,
   handleDownloadGif,
-  divRef
+  divRef,
 }) => {
   return (
     <nav className="z-[999] border-b border-gray-300 dark:border-[#1a1a1a] bg-white dark:bg-[#1a1a1a] sticky top-0 w-full h-[56px] shadow-md">
@@ -54,7 +53,7 @@ const Nav = ({
             onChange={(e) => {
               setCanvasStyles((prevStyles) => ({
                 ...prevStyles,
-                aspectRatio: e.target.value
+                aspectRatio: e.target.value,
               }));
 
               setTimeout(() => {

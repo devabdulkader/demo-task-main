@@ -1,11 +1,11 @@
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
 import { useAppContext } from "@/context";
 import { host } from "@/host";
 import { loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react";
 import { AiFillStar, AiOutlineCheck } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Components/shared/footer/Footer";
+import Navbar from "../../Components/shared/header/Navbar";
 const PricingCard = ({
   title,
   price,
@@ -16,7 +16,7 @@ const PricingCard = ({
   onUpgrade,
   planType,
   check,
-  promoCode
+  promoCode,
 }) => {
   return (
     <div
@@ -108,7 +108,7 @@ const Pricing = () => {
     const response = await fetch(`${host}/api/payments/cancel_subscription`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ _id: _id, subscriptionId: pSubscription })
+      body: JSON.stringify({ _id: _id, subscriptionId: pSubscription }),
     });
     const data = await response.json();
     // console.log(data)
@@ -119,7 +119,7 @@ const Pricing = () => {
       closeOnClick: false,
       pauseOnHover: true,
       draggable: true,
-      progress: undefined
+      progress: undefined,
     });
 
     setshowModal(false);
@@ -134,7 +134,7 @@ const Pricing = () => {
     const response = await fetch(`${host}/api/payments/checkout_sessions`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount: 1, currency: "usd", _id, plan: plan })
+      body: JSON.stringify({ amount: 1, currency: "usd", _id, plan: plan }),
     });
     const data = await response.json();
 
@@ -142,7 +142,7 @@ const Pricing = () => {
 
     const dataToSave = {
       admin: _id,
-      sessionId: data.session.id
+      sessionId: data.session.id,
     };
     const dataString = JSON.stringify(dataToSave);
     localStorage.setItem("paymentData", dataString);
@@ -150,7 +150,7 @@ const Pricing = () => {
     try {
       setprocessing(false);
       const result = await stripe.redirectToCheckout({
-        sessionId: data.session.id
+        sessionId: data.session.id,
       });
 
       if (result.error) {
@@ -181,8 +181,8 @@ const Pricing = () => {
         "Premium Frames",
         "Premium Fonts",
         "Upto 500 Design Presets",
-        "No Google Ads"
-      ]
+        "No Google Ads",
+      ],
     },
     {
       title: "Lifetime",
@@ -203,9 +203,9 @@ const Pricing = () => {
         "Premium Frames",
         "Premium Fonts",
         "Upto 500 Design Presets",
-        "No Google Ads"
+        "No Google Ads",
       ],
-      recommended: true
+      recommended: true,
     },
     {
       title: "Annual",
@@ -224,14 +224,14 @@ const Pricing = () => {
         "Premium Frames",
         "Premium Fonts",
         "Upto 500 Design Presets",
-        "No Google Ads"
-      ]
-    }
+        "No Google Ads",
+      ],
+    },
   ];
 
   return (
     <>
-      <Navbar show={true}></Navbar>
+      <Navbar show={true} />
 
       <div className="py-12 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,7 +264,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
@@ -277,7 +277,7 @@ const UserReview = () => {
     "/test2.webp",
     "/test3.webp",
     "/test4.webp",
-    "/test5.webp"
+    "/test5.webp",
   ];
 
   return (

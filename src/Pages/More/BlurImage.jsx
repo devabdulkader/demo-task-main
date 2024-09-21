@@ -1,10 +1,10 @@
-import Footer from "@/Components/Footer";
 import domtoimage from "dom-to-image";
 import { useRef, useState } from "react";
 import { MdFileDownload, MdOutlineLensBlur } from "react-icons/md";
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import HandyFreeTools from "../Tools/HandyFreeTools";
+import Footer from "../../Components/shared/footer/Footer";
 const BlurImage = () => {
   const [blur, setBlur] = useState(0);
   const [img, setImg] = useState("");
@@ -31,8 +31,8 @@ const BlurImage = () => {
             transform: "scale(2)",
             transformOrigin: "top left",
             width: node.offsetWidth + "px",
-            height: node.offsetHeight + "px"
-          }
+            height: node.offsetHeight + "px",
+          },
         });
         const downloadLink = document.createElement("a");
         downloadLink.download = `pixlab_${Date.now()}.png`;
@@ -273,7 +273,7 @@ const BlurImage = () => {
         <HandyFreeTools toolsTitle={"You might also like"} />
       </div>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
