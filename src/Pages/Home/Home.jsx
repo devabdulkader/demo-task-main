@@ -4,6 +4,9 @@ import Hero from "../../Components/landing/Hero";
 import TemplateSelector from "../../Components/landing/TemplateSelector";
 import ToolsHub from "../../Components/landing/ToolsHub";
 import Footer from "../../Components/shared/footer/Footer";
+import FrequentlyAskedQuestion from "../../Components/FrequentlyAskedQuestions/FAQ";
+import Pricing from "../../Components/Pricing/Pricing";
+import FooterSection from "../../Components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -15,6 +18,14 @@ const Home = () => {
           <ToolsHub />
           <HandyFreeTools />
           <Footer />
+
+          <FrequentlyAskedQuestion />
+
+          <Pricing />
+
+          <FooterSection />
+
+          <Footer></Footer>
         </main>
       </div>
     </>

@@ -73,26 +73,13 @@ body {
 }
 
 /* Base gradient */
-/* .gradient-middle {
-  background: linear-gradient(
-    90deg,
-    rgb(19, 14, 16) 10%,
-    rgb(52, 24, 27) 50%,
-    rgb(19, 14, 16) 90%
-  );
-} */
 .gradient-middle {
   background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgb(19, 14, 16) 10%,
-      rgb(52, 24, 27) 50%,
-      rgb(19, 14, 16) 90%
-    );
+    90deg,
+    rgb(19, 14, 16) 25%,
+    rgb(52, 24, 27) 50%,
+    rgb(19, 14, 16) 75%
+  );
 }
 
 /* Gradient for small screens */
@@ -105,6 +92,14 @@ body {
       rgb(19, 14, 16) 90%
     );
   }
+}
+
+.gradeint-button {
+  background: linear-gradient(
+    358.3deg,
+    rgb(201, 38, 152) 12.9%,
+    rgb(250, 93, 58) 130.3%
+  );
 }
 
 .swiper {
@@ -141,6 +136,7 @@ body {
   background-image: radial-gradient(#c2c2c2 0.7px, #fff 1px) !important;
   background-size: 14px 14px;
 }
+
 .con_dm {
   background-image: radial-gradient(#2c2c2c 0.9px, #0b0b0b 1px) !important;
   background-size: 14px 14px;
@@ -350,6 +346,7 @@ body {
   width: 16px;
   height: 16px;
 }
+
 /* watermark css ends */
 
 @media (max-width: 1200px) {
@@ -388,6 +385,7 @@ body {
     width: 12px;
     height: 12px;
   }
+
   .dropdown_header {
     left: 0px;
   }
@@ -652,6 +650,7 @@ pre {
     margin: 0;
     display: none;
   }
+
   .dnone {
     display: none !important;
   }
@@ -951,72 +950,4 @@ pre {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f1f1f1;
-}
-
-/* .gradient-template {
-  background: linear-gradient(
-    90deg,
-    rgb(19, 14, 16) 25%,
-    rgb(52, 24, 27) 50%,
-    rgb(19, 14, 16) 75%
-  );
-} */
-
-/* .gradient-template {
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0) 30%
-    ),
-    linear-gradient(
-      90deg,
-      rgb(19, 14, 16) 25%,
-      rgb(52, 24, 27) 50%,
-      rgb(19, 14, 16) 75%
-    );
-} */
-
-.gradient-template {
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8) 0%,
-      /* Dark at the top */ rgba(0, 0, 0, 0) 30%,
-      /* Transparent in the middle */ rgba(0, 0, 0, 0) 70%,
-      /* Transparent in the middle */ rgba(0, 0, 0, 0.8) 100%
-        /* Dark at the bottom */
-    ),
-    linear-gradient(
-      90deg,
-      rgb(19, 14, 16) 25%,
-      /* Darker sides */ rgb(52, 24, 27) 50%,
-      /* Reddish middle */ rgb(19, 14, 16) 75% /* Darker sides */
-    );
-}
-
-.gradient-div {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(5, 6, 5, 1) 0%,
-    rgba(80, 43, 30, 1) 43%,
-    rgba(66, 51, 56, 1) 83%,
-    rgba(0, 0, 0, 1) 100%,
-    rgba(41, 47, 45, 1) 100%,
-    rgba(252, 252, 252, 1) 100%
-  );
-}
-
-.gradeint-button {
-  background-color: linear
-    (358.3deg, rgb(201, 38, 152) 12.9%, rgb(250, 93, 58) 130.3%);
-}
-
-.gradient-toolshub {
-  background: radial-gradient(circle, rgb(58, 18, 24) 30%, rgb(6, 2, 2) 70%);
-}
-
-.darker-box-shadow {
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px 1px;
 }
