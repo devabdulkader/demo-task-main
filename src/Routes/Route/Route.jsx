@@ -4,7 +4,7 @@ import HandyFreeTools from "@/Pages/Tools/HandyFreeTools";
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../../Components/ErrorPage/ErrorPage";
 import About from "../../Pages/About/About";
-import Pricing from "@/Pages/Pricing/Pricing";
+// import Pricing from "@/Pages/Pricing/Pricing";
 import Contact from "@/Pages/Contact/Contact";
 import Privacy from "@/Pages/Privacy/Privacy";
 import Terms from "@/Pages/Terms/Terms";
@@ -45,110 +45,110 @@ export const router = createBrowserRouter([
       /* Sidebar all routes setup start */
       {
         path: "*", // Catch-all route for undefined routes (404)
-        element: <ErrorPage /> // Display ErrorPage for 404 or unmatched routes
+        element: <ErrorPage />, // Display ErrorPage for 404 or unmatched routes
       },
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/about",
-        element: <About />
+        element: <About />,
       },
       {
         path: "/more",
-        element: <HandyFreeTools />
+        element: <HandyFreeTools />,
       },
-      {
-        path: "/pricing",
-        element: <Pricing />
-      },
+      // {
+      //   path: "/pricing",
+      //   element: <Pricing />
+      // },
       {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: "/privacy",
-        element: <Privacy />
+        element: <Privacy />,
       },
       {
         path: "/terms",
-        element: <Terms />
+        element: <Terms />,
       },
       {
         path: "/signup",
-        element: <SignUpPage />
+        element: <SignUpPage />,
       },
       {
         path: "/login",
-        element: <LoginPage />
+        element: <LoginPage />,
       },
       /* Sidebar all routes setup end */
 
       /* home page all templates routes setup start */
       {
         path: "/design",
-        element: <Design />
+        element: <Design />,
       },
       {
         path: "/screenshot-mockup",
-        element: <ScreenshotMockup />
+        element: <ScreenshotMockup />,
       },
       {
         path: "/code",
-        element: <Code />
+        element: <Code />,
       },
       {
         path: "/device-mockups",
-        element: <DeviceMockUp />
+        element: <DeviceMockUp />,
       },
       {
         path: "/device-mockups/:device",
-        element: <Device />
+        element: <Device />,
       },
       {
         path: "/videos",
-        element: <Videos />
+        element: <Videos />,
       },
       {
         path: "/videos/typewriter",
-        element: <VideoLayout />
+        element: <VideoLayout />,
       },
       {
         path: "/tweet-to-screenshot",
-        element: <TweetScreenShort />
+        element: <TweetScreenShort />,
       },
       {
         path: "/reddit-screenshot",
-        element: <RedditScreenShort />
+        element: <RedditScreenShort />,
       },
       {
         path: "/testimonial",
-        element: <Testimonial />
+        element: <Testimonial />,
       },
       {
         path: "/youtube-screenshot",
-        element: <YoutubeScreenShort />
+        element: <YoutubeScreenShort />,
       },
       {
         path: "/twitter",
-        element: <Twitter />
+        element: <Twitter />,
       },
       {
         path: "/qr-code",
-        element: <QrCode />
+        element: <QrCode />,
       },
       {
         path: "/short-blog",
-        element: <ShortBlog />
+        element: <ShortBlog />,
       },
       {
         path: "/instagram",
-        element: <Instagram />
+        element: <Instagram />,
       },
       {
         path: "/bar-code",
-        element: <BarCode />
+        element: <BarCode />,
       },
 
       /* home page all templates routes setup end */
@@ -156,42 +156,41 @@ export const router = createBrowserRouter([
       /* more tools routes setup start */
       {
         path: "/more/icon-image",
-        element: <IconGenerator />
+        element: <IconGenerator />,
       },
       {
         path: "/more/image-converter",
-        element: <ImageConverter />
+        element: <ImageConverter />,
       },
       {
         path: "/more/blur-image",
-        element: <BlurImage />
+        element: <BlurImage />,
       },
       {
         path: "/more/crop-image",
-        element: <CropImageTool />
+        element: <CropImageTool />,
       },
       {
         path: "/more/gif",
-        element: <GifGenerator />
+        element: <GifGenerator />,
       },
       {
         path: "/more/google-suggestions",
-        element: <GoogleSuggestion />
+        element: <GoogleSuggestion />,
       },
       {
         path: "/more/color-picker",
-        element: <ColorPicker />
+        element: <ColorPicker />,
       },
       {
         path: "/more/image-color-picker",
-        element: <ImageColorPicker />
+        element: <ImageColorPicker />,
       },
       {
         path: "/more/resize-image",
-        element: <ImageResizer />
+        element: <ImageResizer />,
       },
       /* more tools routes setup end */
-
-    ]
+    ],
   },
 ]);

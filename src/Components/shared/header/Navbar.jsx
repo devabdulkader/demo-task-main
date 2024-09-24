@@ -55,9 +55,9 @@ import ModeToggle from "./ModeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/features", label: "Features" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/faqs", label: "FAQs" },
+  { href: "#features", label: "Features" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#faqs", label: "FAQs" },
   { href: "/dashboard", label: "Dashboard" },
 ];
 

@@ -1,5 +1,3 @@
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
 import { useAppContext } from "@/context";
 import { host } from "@/host";
 import { loadStripe } from "@stripe/stripe-js";
@@ -7,6 +5,7 @@ import { useEffect, useState } from "react";
 import { AiFillStar, AiOutlineCheck } from "react-icons/ai";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../shared/header/Navbar";
 const PricingCard = ({
   title,
   price,
