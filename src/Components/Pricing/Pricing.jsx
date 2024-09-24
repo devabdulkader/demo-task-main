@@ -20,8 +20,8 @@ const PricingCard = ({
 }) => {
   return (
     <div
-      className={`relative flex flex-col p-6 bg-white dark:bg-gray-800 border-2 rounded-md sm:rounded-none overflow-hidden border-gray-700 ${
-        recommended ? "border-2 border-teal-500" : ""
+      className={`relative flex flex-col p-6  border rounded-md sm:rounded-none overflow-hidden border-gray-700 ${
+        recommended ? " border-teal-500" : ""
       }`}
     >
       {recommended && (
@@ -210,14 +210,14 @@ const Pricing = () => {
     <>
       <Navbar show={true}></Navbar>
 
-      <div className="py-12 bg-gray-100 dark:bg-gray-900">
+      <div className="py-12 gradient-template">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
               Simple, transparent pricing
             </h2>
           </div>
-          <div className="mt-12 mb-8 space-y-4 overflow-hidden rounded-none sm:rounded-lg border-0 sm:border-4 border-gray-700 sm:mt-16 sm:mb-12 sm:space-y-0 sm:grid sm:grid-cols-2 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-2">
+          <div className="mt-12 mb-8 space-y-4 overflow-hidden rounded-2xl sm:border border-gray-700 sm:mt-16 sm:mb-12 sm:space-y-0 sm:grid sm:grid-cols-2 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-2 ">
             {pricingPlans.map((plan, index) => (
               <PricingCard
                 key={index}
@@ -261,7 +261,7 @@ const BoilerPlate = ({
   secondaryBtn,
 }) => {
   return (
-    <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 border-4 border-gray-700 shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-2xl mx-auto border border-gray-700 shadow-lg rounded-2xl overflow-hidden">
       <div className="px-8 py-4 sm:px-16 sm:py-8">
         <div className="text-center">
           <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white flex items-center justify-center">
