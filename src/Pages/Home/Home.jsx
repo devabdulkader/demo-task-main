@@ -15,7 +15,7 @@ const Home = () => {
           <Hero />
           <TemplateSelector />
           <ToolsHub />
-          <HandyFreeTools />
+          {/* <HandyFreeTools /> */}
 
           <FrequentlyAskedQuestion />
 

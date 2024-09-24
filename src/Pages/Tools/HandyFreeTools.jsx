@@ -5,48 +5,48 @@ const HandyFreeTools = ({ toolsTitle }) => {
     {
       title: "Icon Images",
       description: "Easily create app icons",
-      link: "/more/icon-image"
+      link: "/more/icon-image",
     },
     {
       title: "Image Converter",
       description: "PNG/ WEBP/ JPG/ SVG",
-      link: "/more/image-converter"
+      link: "/more/image-converter",
     },
     {
       title: "Blur / Redact Image",
       description: "Easily redact information",
-      link: "/more/blur-image"
+      link: "/more/blur-image",
     },
     {
       title: "Crop Image",
       description: "Easily crop images",
-      link: "/more/crop-image"
+      link: "/more/crop-image",
     },
     {
       title: "GIF Generator",
       description: "GIF from images",
-      link: "/more/gif"
+      link: "/more/gif",
     },
     {
       title: "Google Suggestions",
       description: "Fake google suggestions",
-      link: "/more/google-suggestions"
+      link: "/more/google-suggestions",
     },
     {
       title: "Color picker",
       description: "Online color picker",
-      link: "/more/color-picker"
+      link: "/more/color-picker",
     },
     {
       title: "Image Color picker",
       description: "Online Image color picker",
-      link: "/more/image-color-picker"
+      link: "/more/image-color-picker",
     },
     {
       title: "Resize image",
       description: "To any pixel",
-      link: "/more/resize-image"
-    }
+      link: "/more/resize-image",
+    },
   ];
   const location = useLocation();
   const pathHandyTools = location.pathname;

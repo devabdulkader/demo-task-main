@@ -29,10 +29,10 @@ const PricingCard = ({
           Recommended
         </div>
       )}
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center justify-center">
+      <h3 className="text-xl font-semibold text-white flex items-center justify-center">
         {title}
         {promoCode && (
-          <div className="ml-4 text-sm text-teal-600 dark:text-teal-400 font-mono text-center">
+          <div className="ml-4 text-sm text-teal-400 font-mono text-center">
             Use code: {promoCode}
           </div>
         )}
@@ -40,19 +40,17 @@ const PricingCard = ({
       <div className="mt-4 text-center">
         {discountedPrice ? (
           <>
-            <span className="text-4xl font-bold text-gray-900 dark:text-white">
+            <span className="text-4xl font-bold text-white">
               ${discountedPrice}
             </span>
-            <span className="ml-2 text-2xl font-medium text-gray-500 dark:text-gray-400 line-through">
+            <span className="ml-2 text-2xl font-medium text-gray-400 line-through">
               ${price}
             </span>
           </>
         ) : (
-          <span className="text-4xl font-bold text-gray-900 dark:text-white">
-            ${price}
-          </span>
+          <span className="text-4xl font-bold text-white">${price}</span>
         )}
-        <span className="text-gray-500 dark:text-gray-400">/{period}</span>
+        <span className="text-gray-400">/{period}</span>
       </div>
       <button
         onClick={onUpgrade}
@@ -69,9 +67,7 @@ const PricingCard = ({
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
             <IoIosCheckmarkCircle className="flex-shrink-0 w-5 h-5 text-green-500" />
-            <span className="ml-3 text-gray-700 dark:text-gray-300">
-              {feature}
-            </span>
+            <span className="ml-3 text-gray-300">{feature}</span>
           </li>
         ))}
       </ul>
@@ -213,7 +209,7 @@ const Pricing = () => {
       <div className="py-12 gradient-template">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               Simple, transparent pricing
             </h2>
           </div>
@@ -264,22 +260,22 @@ const BoilerPlate = ({
     <div className="max-w-2xl mx-auto border border-gray-700 shadow-lg rounded-2xl overflow-hidden">
       <div className="px-8 py-4 sm:px-16 sm:py-8">
         <div className="text-center">
-          <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white flex items-center justify-center">
+          <h3 className="text-xl sm:text-2xl font-semibold text-white flex items-center justify-center">
             {title}
           </h3>
           <div className="mt-4">
-            <span className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+            <span className="text-3xl sm:text-4xl font-bold text-white">
               ${price}
             </span>
-            <span className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
+            <span className="text-sm sm:text-base text-gray-400">
               /{period}
             </span>
           </div>
         </div>
-        <p className="text-sm sm:text-base mt-4 text-gray-700 dark:text-gray-300 text-center">
+        <p className="text-sm sm:text-base mt-4 text-gray-300 text-center">
           {description}
         </p>
-        <p className="text-sm sm:text-base mt-3 text-gray-700 dark:text-gray-300 text-center">
+        <p className="text-sm sm:text-base mt-3 text-gray-300 text-center">
           {message}
         </p>
 
@@ -309,10 +305,7 @@ const UserReview = () => {
     <div className="flex items-center justify-center flex-col md:flex-row space-x-4 py-6 mt-12">
       <div className="flex -space-x-2">
         {userAvatars.map((avatar, index) => (
-          <div
-            key={index}
-            className=" rounded-full border-2 dark:border-gray-800"
-          >
+          <div key={index} className=" rounded-full border-2 border-gray-800">
             <img
               src={avatar}
               alt={`User ${index + 1}`}
@@ -321,7 +314,7 @@ const UserReview = () => {
           </div>
         ))}
 
-        <span className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800">
+        <span className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 rounded-full hover:bg-gray-600 border-gray-800">
           +671
         </span>
       </div>
@@ -333,7 +326,7 @@ const UserReview = () => {
           <AiFillStar className="w-5 h-5" />
           <AiFillStar className="w-5 h-5" />
         </div>
-        <span className="ml-2 dark:text-white  text-lg font-semibold">
+        <span className="ml-2 text-white  text-lg font-semibold">
           674 users love pixlab
         </span>
       </div>

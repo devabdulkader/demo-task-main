@@ -330,23 +330,23 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="dark-gradient">
       <footer className="block">
         <div className="mx-auto w-full max-w-2xl px-5 py-16 md:px-10 md:py-20">
           <div className="text-center mb-12">
-            <h2 className="text-xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+            <h2 className="text-xl sm:text-3xl font-bold mb-6 text-gray-100">
               Ready to Elevate Your Visual Content?
             </h2>
-            <button className="px-4 py-2 rounded-xl overflow-hidden border-2 border-purple-500 text-gray-900 dark:text-gray-100">
+            <button className="px-4 py-2 rounded-xl overflow-hidden border-2 border-purple-500 text-gray-100">
               Get Started Now &rarr;
             </button>
           </div>
           <div className="grid mb-10 grid-cols-[auto] justify-between gap-8 sm:grid-cols-[auto_auto_auto]">
             <div className="flex flex-col items-start">
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase">
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase">
                 Menu
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li className="mb-2">
                   <Link to="/about" className="hover:underline">
                     Home
@@ -375,10 +375,10 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col items-start">
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase">
+              <h2 className="mb-6 text-white text-sm font-semiboldtext-gray-100 uppercase">
                 Other Links
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li className="mb-2">
                   <Link to="/" className="hover:underline">
                     Links ipsum
@@ -402,10 +402,10 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col items-start">
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase">
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase">
                 Other Links
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium">
                 <li className="mb-2">
                   <Link to="/" className="hover:underline">
                     Links ipsum

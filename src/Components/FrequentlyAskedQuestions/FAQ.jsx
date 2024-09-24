@@ -43,7 +43,7 @@ const FrequentlyAskedQuestion = () => {
     <section className=" gradient-template ">
       <div className="mx-auto flex w-full max-w-7xl flex-col  items-center px-5 py-16 md:px-10 md:py-20">
         <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-black dark:text-white">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
             Frequently Asked Questions
           </h2>
         </div>
@@ -51,7 +51,7 @@ const FrequentlyAskedQuestion = () => {
           {dataArr.map((PerAccordion, idx) => (
             <div
               key={idx}
-              className="my-2 border-b bp-3 py-3 *:mix-blend-difference dark:border-zinc-600 "
+              className="my-2 border-b bp-3 py-3 *:mix-blend-difference border-zinc-600 "
             >
               <button
                 onClick={() => toggle(idx)}
