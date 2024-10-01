@@ -163,13 +163,13 @@ const HandyFreeTools = ({ toolsTitle }) => {
   return (
     <>
       <div
-        className={`px-5 gradient-handytools lg:px-10 mx-5 ${
+        className={`px-5 border-2 border-transparent gradient-handytools lg:px-10  ${
           pathHandyTools === "/more" && "flex-1 overflow-y-auto"
         }`}
       >
         <main className={`${pathHandyTools === "/more" && "px-2 py-4 md:p-8"}`}>
           <div className="mx-auto mb-12">
-            <h2 className="text-xl md:text-4xl text-center py-10 lg:text-5xl  font-bold mb-4 md:mb-8 dark:text-gray-100 text-[#171717]">
+            <h2 className="text-xl md:text-4xl text-center py-10 lg:text-5xl  font-bold mb-4 md:mb-8 text-gray-100 ">
               {toolsTitle ? toolsTitle : "Handy Tools for Effortless Design"}
             </h2>
 
@@ -183,14 +183,14 @@ const HandyFreeTools = ({ toolsTitle }) => {
                 >
                   <Link
                     to={tool.link}
-                    className="block h-full bg-[#181717] border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+                    className="block h-full bg-[#181717]  border-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1"
                   >
                     <div className="p-6">
                       <img src={tool.imageUrl} alt="" className="w-full mb-4" />
-                      <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">
+                      <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-100">
                         {tool.title}
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                      <p className="text-sm text-gray-300">
                         {tool.description}
                       </p>
                     </div>

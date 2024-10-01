@@ -153,7 +153,7 @@ const Navbar = () => {
                       }}
                     >
                       <div
-                        className="flex items-center text-black dark:text-white bg-white dark:bg-black"
+                        className="flex items-center text-white bg-black"
                         style={{
                           borderRadius: "inherit", // Inherit border-radius
                           padding: "7px 20px", // Padding for the text inside
