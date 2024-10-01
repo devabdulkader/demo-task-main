@@ -982,6 +982,23 @@ pre {
     );
 }
 
+.gradient-handytools {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      /* Dark at the top */ rgba(0, 0, 0, 0) 30%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0) 70%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0.8) 100%
+        /* Dark at the bottom */
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 25%,
+      /* Darker sides */ rgb(52, 24, 27) 50%,
+      /* Reddish middle */ rgb(19, 14, 16) 75% /* Darker sides */
+    );
+}
+
 .dark-gradient {
   background: linear-gradient(
       to bottom,

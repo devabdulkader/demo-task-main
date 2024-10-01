@@ -330,11 +330,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="dark-gradient">
+    <div className="bg-[#0d0d0f]">
       <footer className="block">
-        <div className="mx-auto w-full max-w-2xl px-5 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-5xl px-5 py-16 md:px-10 md:py-20">
           <div className="text-center mb-12">
-            <h2 className="text-xl sm:text-3xl font-bold mb-6 text-gray-100">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-100">
               Ready to Elevate Your Visual Content?
             </h2>
             <button className="px-4 py-2 rounded-xl overflow-hidden border-2 border-purple-500 text-gray-100">

@@ -54,7 +54,7 @@ const PricingCard = ({
       </div>
       <button
         onClick={onUpgrade}
-        className={`mt-8 w-full gradeint-button px-4 py-2 text-sm font-medium text-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+        className={`mt-8 w-full gradeint-button px-4 py-3 text-sm font-medium text-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${
           planType === check
             ? "bg-red-600 hover:bg-red-700 focus:ring-red-500"
             : "bg-teal-600 hover:bg-teal-700 focus:ring-teal-500"
@@ -209,7 +209,7 @@ const Pricing = () => {
       <div className="py-12 gradient-template">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
               Simple, transparent pricing
             </h2>
           </div>
@@ -280,10 +280,10 @@ const BoilerPlate = ({
         </p>
 
         <div className="mt-8 flex flex-row space-x-4">
-          <button className="w-full gradeint-button px-4 py-2 text-xs sm:text-sm font-medium text-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-offset-2">
+          <button className="w-full gradeint-button px-4 py-3 text-xs sm:text-sm font-medium text-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-offset-2">
             {primaryBtn}
           </button>
-          <button className="w-full bg-black px-4 py-2 text-xs sm:text-sm font-medium text-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-offset-2">
+          <button className="w-full bg-black px-4 py-3 text-xs sm:text-sm font-medium text-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-offset-2">
             {secondaryBtn}
           </button>
         </div>
