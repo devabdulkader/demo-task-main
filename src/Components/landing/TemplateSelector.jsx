@@ -151,12 +151,33 @@ const TemplateSelector = () => {
             {" "}
             {/* Increased the height for better visibility */}
             <Swiper
-              slidesPerView={4} // Number of slides visible at a time
               spaceBetween={30} // Space between each slide
               pagination={{
                 clickable: true,
               }}
-              // modules={[Pagination]}
+              breakpoints={{
+                // Breakpoints for different screen sizes
+                320: {
+                  slidesPerView: 1, // 1 slide visible on small screens (e.g., mobile)
+                  // pagination: {
+                  //   // Enable pagination on small screens
+                  //   enabled: true,
+                  // },
+                },
+                640: {
+                  slidesPerView: 2, // 2 slides visible on medium screens (e.g., tablets)
+                  pagination: {
+                    enabled: false,
+                  },
+                },
+                1024: {
+                  slidesPerView: 3, // 3 slides visible on large screens
+                },
+                1440: {
+                  slidesPerView: 4, // 4 slides visible on extra large screens
+                },
+              }}
+              modules={[Pagination]}
               className="mySwiper"
             >
               {firstHalf.map((template, index) => (
@@ -169,12 +190,33 @@ const TemplateSelector = () => {
             </Swiper>
             {/* Increased the height for better visibility */}
             <Swiper
-              slidesPerView={4} // Number of slides visible at a time
               spaceBetween={30} // Space between each slide
               pagination={{
                 clickable: true,
               }}
-              // modules={[Pagination]}
+              breakpoints={{
+                // Breakpoints for different screen sizes
+                320: {
+                  slidesPerView: 1, // 1 slide visible on small screens (e.g., mobile)
+                  // pagination: {
+                  //   // Enable pagination on small screens
+                  //   enabled: true,
+                  // },
+                },
+                640: {
+                  slidesPerView: 2, // 2 slides visible on medium screens (e.g., tablets)
+                  pagination: {
+                    enabled: false,
+                  },
+                },
+                1024: {
+                  slidesPerView: 3, // 3 slides visible on large screens
+                },
+                1440: {
+                  slidesPerView: 4, // 4 slides visible on extra large screens
+                },
+              }}
+              modules={[Pagination]}
               className="mySwiper"
             >
               {secondHalf.map((template, index) => (
@@ -225,7 +267,7 @@ export const TemplateCard = ({ title, thumbnail, link, description }) => {
       <div className="relative overflow-hidden">
         <img
           src={thumbnail}
-          className="aspect-video overflow-hidden rounded-none border-blue-700 object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+          className="aspect-video overflow-hidden rounded-none  object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
           alt={title}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

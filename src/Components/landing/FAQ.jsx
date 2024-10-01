@@ -58,11 +58,13 @@ const FrequentlyAskedQuestion = () => {
                 onClick={() => toggle(idx)}
                 className="flex h-full w-full items-center  justify-between font-medium text-white outline-none"
               >
-                <span className="text-xl">{PerAccordion.question}</span>
+                <span className="text-xl text-left">
+                  {PerAccordion.question}
+                </span>
                 {isOpen == idx ? (
-                  <FaMinus className="text-[rgb(201_38_152)] text-3xl" />
+                  <FaMinus className="text-[rgb(201_38_152)] sm:text-3xl" />
                 ) : (
-                  <FaPlus className="text-[rgb(201_38_152)] text-3xl" />
+                  <FaPlus className="text-[rgb(201_38_152)] sm:text-3xl" />
                 )}
               </button>
               <div
