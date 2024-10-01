@@ -17,7 +17,7 @@ const Nav = ({
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <Link to={"/"} className="md:flex items-center">
           <img
-            src="/logo_white.png"
+            src="/favicon.png"
             className="h-10 mr-3 rounded-lg shadow-md transform transition-transform hover:rotate-0 -rotate-6"
             alt="pixlab logo"
           />
