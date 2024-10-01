@@ -98,17 +98,15 @@ const Navbar = () => {
     <>
       {!shouldHideSidebar && (
         <nav className="font-inter mx-auto h-auto w-full xl:px-20 z-30 fixed top-0 xl:top-10 bg-transparent">
-          <div className="flex px-6 bg-white shadow-sm dark:bg-black lg:rounded-xl items-center justify-between py-1 lg:px-10 xl:px-20">
+          <div className="flex px-6  shadow-sm bg-black lg:rounded-xl items-center justify-between py-1 lg:px-10 xl:px-20">
             {/* Logo */}
             <Link to="/" className="flex items-center pl-3">
+              <img src="/favicon.png" className="h-10 mr-3 " alt="pixlab" />
               <img
-                src="/logo_white.png"
-                className="h-8 mr-3 rounded-lg shadow-md transform transition-transform hover:rotate-0 -rotate-6"
+                src="landing/logo-dark.png"
+                className="h-8 mr-3"
                 alt="pixlab"
               />
-              <span className="self-center text-lg font-semibold whitespace-nowrap text-black dark:text-gray-200">
-                pixlab
-              </span>
             </Link>
 
             {/* Navigation Links */}
