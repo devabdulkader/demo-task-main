@@ -35,6 +35,7 @@ import GoogleSuggestion from "@/Pages/More/GoogleSuggestions";
 import ImageColorPicker from "@/Pages/More/ImageColorPicker";
 import ColorPicker from "@/Pages/More/ColorPicker";
 import ImageResizer from "@/Pages/More/ResizeImage";
+import FeatureLayout from "../../Layout/FeatureLayout";
 
 export const router = createBrowserRouter([
   {
@@ -191,6 +192,17 @@ export const router = createBrowserRouter([
         element: <ImageResizer />,
       },
       /* more tools routes setup end */
+    ],
+  },
+  {
+    path: "/features",
+    element: <FeatureLayout />,
+    children: [
+      /* Sidebar all routes setup start */
+      {
+        path: "*", // Catch-all route for undefined routes (404)
+        element: <ErrorPage />, // Display ErrorPage for 404 or unmatched routes
+      },
     ],
   },
 ]);
